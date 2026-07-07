@@ -1,0 +1,10 @@
+name: heart_disease_ml
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      train_path: {type: path, default: heart_disease_preprocessing/train.csv}
+      test_path: {type: path, default: heart_disease_preprocessing/test.csv}
+    command: "python3 modelling.py --train-path {train_path} --test-path {test_path}"
